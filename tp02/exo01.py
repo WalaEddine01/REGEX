@@ -7,3 +7,4 @@ def exo01(text):
     print(res)
 
 String = "2ThisIs"
+exo01(String)
