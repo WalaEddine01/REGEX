@@ -1,0 +1,20 @@
+{
+    "magazines": {
+        "Magazine with ID 201": {
+            "title": "AI Monthly",
+            "editor": "Dr. Emily Stone",
+            "category": "Technology",
+            "price": "5.99",
+            "published": "2024-02-01",
+            "frequency": "Monthly"
+        },
+        "Magazine with ID 202": {
+            "title": "Coding Digest",
+            "editor": "Michael Brown",
+            "category": "Programming",
+            "price": "7.99",
+            "published": "2024-01-15",
+            "frequency": "Bi-Monthly"
+        }
+    }
+}

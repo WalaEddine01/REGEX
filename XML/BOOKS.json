@@ -1,0 +1,49 @@
+{
+    "books": {
+        "Book with ID 101": {
+            "title": "Python Basics",
+            "author": "John Doe",
+            "genre": "Programming",
+            "price": "29.99",
+            "published": "2023-01-15",
+            "rating": "No rating available",
+            "publisher": "No publisher available"
+        },
+        "Book with ID 102": {
+            "title": "Advanced AI",
+            "author": "Jane Smith",
+            "genre": "Artificial Intelligence",
+            "price": "45.50",
+            "published": "2022-10-01",
+            "rating": "No rating available",
+            "publisher": "No publisher available"
+        },
+        "Book with ID 103": {
+            "title": "Web Development Guide",
+            "author": "Bob Williams",
+            "genre": "Web Development",
+            "price": "22.75",
+            "published": "2020-06-20",
+            "rating": "No rating available",
+            "publisher": "TechBooks Ltd."
+        },
+        "Book with ID 104": {
+            "title": "Machine Learning Essentials",
+            "author": "Alice Johnson",
+            "genre": "Machine Learning",
+            "price": "35.00",
+            "published": "2023-07-10",
+            "rating": "4.8",
+            "publisher": "No publisher available"
+        },
+        "Book with ID 105": {
+            "title": "Data Science Fundamentals",
+            "author": "Linda Green",
+            "genre": "Data Science",
+            "price": "40.99 USD",
+            "published": "2023-11-20",
+            "rating": "4.9",
+            "publisher": "No publisher available"
+        }
+    }
+}
