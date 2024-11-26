@@ -10,6 +10,7 @@ class MyGUI:
         self.root = tk.Tk()
         self.root.title("Practical Section - Tkinter")
         self.root.geometry("600x400")
+        self.root.bind("<Return>", self.showmsg)
 
         self.newLabel = tk.Label(self.root, text="Welcome to Tkinter Practical Section", font=("Arial", 16))
         self.newLabel.pack(padx=20, pady=20)
@@ -22,7 +23,7 @@ class MyGUI:
 
         self.root.mainloop()
 
-    def showmsg(self):
+    def showmsg(self, event=None):
         """
         """
         if self.textBox.get("1.0", tk.END).strip() != "":
