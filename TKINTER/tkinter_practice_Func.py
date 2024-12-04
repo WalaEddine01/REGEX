@@ -3,6 +3,7 @@
 """
 
 import tkinter as tk
+from tkinter import messagebox
 
 class MyGUI:
 
@@ -10,7 +11,6 @@ class MyGUI:
         self.root = tk.Tk()
         self.root.title("Practical Section - Tkinter")
         self.root.geometry("600x400")
-        self.root.bind("<Return>", self.showmsg)
 
         self.newLabel = tk.Label(self.root, text="Welcome to Tkinter Practical Section", font=("Arial", 16))
         self.newLabel.pack(padx=20, pady=20)
@@ -34,5 +34,7 @@ class MyGUI:
             self.newLabel2 = tk.Label(self.root, text=f'Hello, Guest! Welcome', font=("Arial", 16))
             self.newLabel2.pack(padx=20, pady=20)
             print(f'Hello, Guest! Welcome')
+        
 
 mygui = MyGUI()
+

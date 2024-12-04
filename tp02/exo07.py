@@ -7,4 +7,3 @@ def exo07(text):
     res = re.findall(pattrn, text)
     print(res)
 
-exo07("Hello World")
