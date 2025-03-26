@@ -56,6 +56,18 @@ class MyGUI:
                                                 activebackground="#e74c3c", activeforeground="#ffffff")
         self.hashtagCheckbox.pack(anchor=tk.W, pady=5)
 
+        self.numsVar = tk.BooleanVar(value=False)
+        self.numsCheckbox = tk.Checkbutton(optionsFrame, text="Numbers", variable=self.numsVar, 
+                                                font=("Segoe UI", 12), fg="#3498db", bg="#ffffff", 
+                                                activebackground="#e74c3c", activeforeground="#ffffff")
+        self.numsCheckbox.pack(anchor=tk.W, pady=5)
+
+        self.charsVar = tk.BooleanVar(value=False)
+        self.charsCheckbox = tk.Checkbutton(optionsFrame, text="Charecters", variable=self.charsVar, 
+                                                font=("Segoe UI", 12), fg="#3498db", bg="#ffffff", 
+                                                activebackground="#e74c3c", activeforeground="#ffffff")
+        self.charsCheckbox.pack(anchor=tk.W, pady=5)
+
         self.buttonFrame = tk.Frame(contentFrame, bg="#f5f5f5")
         self.buttonFrame.pack(pady=15)
 
@@ -84,6 +96,8 @@ class MyGUI:
         emails = []
         phones = []
         hashtags = []
+        nums = []
+        chars = []
 
         if self.emailVar.get():
             pattr = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
@@ -96,6 +110,14 @@ class MyGUI:
         if self.hashtagVar.get():
             pattr = r'#\w+'
             hashtags = re.findall(pattr, text)
+        
+        if self.numsVar.get():
+            pattr = r'\d+'
+            nums = re.findall(pattr, text)
+
+        if self.charsVar.get():
+            pattr = r'[a-zA-z]'
+            chars = re.findall(pattr, text)
 
         result = ""
         if emails:
@@ -103,11 +125,18 @@ class MyGUI:
         
         if phones:
             result += f"Phone Numbers: {', '.join(phones)}\n"
-        
-        if hashtags:
-            result += f"Hashtags: {', '.join(hashtags)}"
 
-        if not self.emailVar.get() and not self.phoneVar.get() and not self.hashtagVar.get():
+        if hashtags:
+            result += f"Hashtags: {', '.join(hashtags)}\n"
+
+        if nums:
+            result += f"Numbers: {', '.join(nums)}\n"
+        
+        if chars:
+            result += f"Charecters: {', '.join(chars)}"
+
+        if not self.emailVar.get() and not self.phoneVar.get() and not self.hashtagVar.get() and not self.numsVar.get()\
+            and not self.charsVar.get():
             messagebox.showerror("Error", "Please select at least one option.")
             return
         
